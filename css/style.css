@@ -1,0 +1,361 @@
+/* common css-----------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Ubuntu&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+}
+
+.container{
+    width: 1030px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.row{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.container::after,
+.container:before {
+    content: "";
+    clear: both;
+    display: table;
+}
+.column2{
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+}
+.column3{
+    width: 33.33%;
+    padding: 0 15px;
+    float: left;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+.Red-Button{
+    background-color: red;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+.divider{
+    display: flex;
+    justify-content: space-between;
+}
+.botttomDivider{
+    position: relative;
+}
+.botttomDivider::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: #f2f2ef;
+}
+.botttomDivider8{
+    position: relative;
+}
+.botttomDivider8::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 8px;
+    width: 100%;
+    background: #f2f2ef;
+}
+/* /common css-----------------------------------------------------------*/
+/* header -----------------------------------------------------------*/
+.logo{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.logo img{
+    width: 80px;
+    display: block;
+}
+.primaryNav{
+    position: relative;
+}
+
+.primaryNav ul{
+    margin: 0;
+    padding: 0;
+}
+.primaryNav ul li{
+    margin-top: 35px;
+    padding-left: 15px;
+    float: left;
+    list-style: none;
+}
+.primaryNav ul li a{
+    text-decoration: none;
+    display: block;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+}
+.primaryNav ul li a.active{
+    color: red;
+}
+.primaryNav ul li a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -15px;
+    height: 3px;
+    width: 0%;
+    background: red;
+    transition: all .4s;
+}
+
+
+.primaryNav ul li a:hover{
+    color: red;
+}
+.primaryNav ul li:hover a::after{
+    width: 100%;
+}
+
+.active{
+   
+}
+.active::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 18px;
+    height: 3px;
+    width: 12%;
+    background: red;
+    transition: all .4s;
+}
+/* /header -----------------------------------------------------------*/
+/* hero section -----------------------------------------------------------*/
+.column2 p{
+
+}
+.column2 h1{
+    font-size: 40px;
+}
+.column2 .myimage{
+    margin-top: 20px;
+    max-width: 100%;
+    display: block;
+    float: right;
+    margin-bottom: 10px;
+}
+/* /hero section -----------------------------------------------------------*/
+/* about section -----------------------------------------------------------*/
+.parent-section{
+    margin-top: 40px;
+    font-family: 'Ubuntu', sans-serif;
+    padding-bottom: 50px;
+    overflow: hidden;
+}
+.image-section img{
+    display: block;
+    width: 450px;
+    max-width: 100%;
+    margin-top: 20px;
+}
+.image-section{
+    position: relative;
+    margin-left: 22px;
+}
+.image-section::before{
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -20px;
+    left: -20px;
+    bottom: 0;
+    height: 100%;
+    width: 90%;
+    background: red;
+    z-index: -1;
+}
+.content-section .about-myself{
+    line-height: 1.7;
+    font-weight: 600;
+}
+/* /about section -----------------------------------------------------------*/
+/* services section -----------------------------------------------------------*/
+.services-section{
+    margin-top: 30px;
+    text-align: center;
+    overflow: hidden;
+   
+}
+.services-section .after{
+    position: relative;
+}
+.services-section .w60{
+    width: 60%;
+    margin: 0 auto 30px;
+}
+.services-section .after::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 8%;
+    left: 46%;
+    background: #000;
+}
+.column3parent .column3{
+    border: 1px solid #f1f1ec;
+    box-shadow: inset 6px 6px 6px 6px #f1f1ec; 
+}
+.column3parent .fa-usps,.fa-cogs,.fa-mobile-alt{
+    margin-top: 20px;
+    background: #f1f1ec;
+    font-size: 25px;
+    padding: 20px;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+}
+/* /services section -----------------------------------------------------------*/
+/* skill section -----------------------------------------------------------*/
+.skill-section{
+    background-color: #f5f5f5;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.education{
+    color: #26305d;
+}
+.skill-section .Red-Button{
+    border-radius: 20px;
+    margin-top: 30px;
+    background-color: green;
+}
+.skill-section .fa-check{
+    color: green;
+    padding-right: 10px;
+    line-height: 2;
+}
+.skill-section .skill-name{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+.skill-section .skill-bar{
+    height: 20px;
+    background: #cacaca;
+    border-radius: 8px;
+}
+.skill-section .skill-per{
+    height: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+.skill-section .width-95{
+    width: 95%;
+    background: #0fbcf9;
+}
+.skill-section .width-90{
+    width: 90%;
+    background: #7d2bc8;
+}
+.skill-section .width-80{
+    width: 80%;
+    background: #45bb35;
+}
+.skill-section .skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+.skill-section .skill-per::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    top: -18px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+}
+
+/* /skill section -----------------------------------------------------------*/
+/* contact section -----------------------------------------------------------*/
+.contact-section{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.form form{
+    padding-top: 20px;
+    
+}
+.form form input,textarea{
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid rgb(196, 187, 187);
+    padding: 10px;
+    box-shadow: 9px 13px 9px #f5f5f2;
+    border-radius: 5px;
+    outline: none ;
+}
+.form .Red-Button{
+    padding: 8px 25px;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+}
+.lastimage{
+    margin-top: 30px;
+}
+/* /contact section -----------------------------------------------------------*/
+/* footer section */
+.footer-section{
+    padding-bottom: 35px;
+}
+.footer-section .column2 .fab{
+    font-size: 25px;
+    padding-left: 15px;
+}
+.footer-section .column2 .fa-facebook{
+    font-size: 25px;
+    padding-left: 15px;
+}
+.footer-section .column2 .fa-twitter{
+    font-size: 25px;
+    padding-left: 15px;
+}
+.footer-section .column2 .fa-linkedin{
+    font-size: 25px;
+    padding-left: 15px;
+}
+.footer-section .column2 .fa-pinterest{
+    font-size: 25px;
+    padding-left: 15px;
+}
+.footer-section .column2 .fa-google-plus{
+    font-size: 25px;
+    padding-left: 15px;
+}
+/* /footer section */
